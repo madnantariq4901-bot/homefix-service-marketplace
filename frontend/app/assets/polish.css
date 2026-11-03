@@ -1,0 +1,44 @@
+/* Global polish layered on top of mains.css */
+::selection { background: #bfdbfe; }
+
+body { -webkit-font-smoothing: antialiased; }
+
+h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.2; }
+h1 { font-size: clamp(26px, 4vw, 34px); font-weight: 800; }
+
+/* Form fields */
+label { color: #334155; }
+input, select, textarea { min-height: 44px; transition: border-color .15s, box-shadow .15s; }
+textarea { min-height: 110px; }
+input::placeholder, textarea::placeholder { color: #94a3b8; }
+input:hover, select:hover, textarea:hover { border-color: #cbd5e1; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgb(36 77 228 / 14%);
+}
+input[type="checkbox"], input[type="radio"] { min-height: 0; width: auto; accent-color: var(--color-primary); }
+
+/* Buttons */
+button { min-height: 44px; box-shadow: 0 1px 2px rgb(15 23 42 / 12%); transition: background .15s, transform .15s, box-shadow .15s; }
+button:hover:not(:disabled) { box-shadow: 0 6px 14px rgb(36 77 228 / 25%); transform: translateY(-1px); }
+button:active:not(:disabled) { transform: translateY(0); }
+
+/* Cards and form panels used across pages */
+.form-card, .profile-card, .job-card, .quote-card, .review-card, .provider-card {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.form-card { box-shadow: var(--shadow-md); }
+
+/* Lists and tables */
+table { width: 100%; border-collapse: collapse; background: var(--color-surface); border-radius: var(--radius); overflow: hidden; }
+th { text-align: left; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted); background: #f8fafc; }
+th, td { padding: 12px 14px; border-bottom: 1px solid var(--color-border); }
+
+/* Header polish */
+.site-header { box-shadow: 0 1px 0 rgb(15 23 42 / 4%), 0 4px 16px rgb(15 23 42 / 4%); }
+
+/* Small page-level helpers */
+.page-title { margin: 0 0 6px; }
+.muted { color: var(--color-muted); }

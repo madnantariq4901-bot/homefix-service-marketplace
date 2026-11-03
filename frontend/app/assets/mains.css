@@ -1,0 +1,162 @@
+@import "./css/variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-page);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  line-height: 1.55;
+}
+
+/* Sticky footer: header / content / footer */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.container {
+  width: min(var(--container), 100% - 32px);
+  margin-inline: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  color: inherit;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(36 77 228 / 35%);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 10px 14px;
+  color: white;
+  font-weight: 600;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+}
+
+button:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+/* Reusable link/button styles for pages: <NuxtLink class="btn btn-primary"> */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  color: #fff;
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-accent {
+  color: #fff;
+  background: var(--color-accent);
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-outline {
+  color: var(--color-primary);
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary-soft);
+}
+
+.btn-light {
+  color: var(--color-primary);
+  background: #fff;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  margin: 0 0 32px;
+  color: var(--color-muted);
+}

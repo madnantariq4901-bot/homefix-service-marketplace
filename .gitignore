@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+backend/private_uploads/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.db
+.pytest_cache/
+node_modules/
+.nuxt/
+.output/
+.nitro/
+dist/
+*.log
+frontend/.homefix-backup/
